@@ -1,20 +1,25 @@
 import 'package:flutter/material.dart';
 
+import 'campos_shopping_cart_page.dart';
+
 void main() {
-  runApp(const MainApp());
+  runApp(const ShoppingCartApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class ShoppingCartApp extends StatelessWidget {
+  const ShoppingCartApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.indigo,
         ),
+        useMaterial3: true,
       ),
+      home: const ShoppingCartPage(),
     );
   }
 }
